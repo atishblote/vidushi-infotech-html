@@ -42,6 +42,7 @@ a {
 }
 header .navbar-nav .nav-item {
   padding: 0px 5px;
+      white-space: nowrap;
 }
 .h_full {
   height: 100%;
@@ -51,6 +52,7 @@ h1 {
 }
 
 .primary_button {
+        white-space: nowrap;
   padding: 10px 20px;
   border-radius: 50px;
   display: flex;
