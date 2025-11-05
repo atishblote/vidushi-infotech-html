@@ -63,7 +63,10 @@ h1 {
   border: 1px solid var(--primary-color);
   font-weight: 500;
 }
-
+.primary_button:hover{
+    background: var(--secondary-color) ;
+    color: var(--primary-color) !important;
+}
 
 /* main start */
 /* hero section */
@@ -90,6 +93,7 @@ section.hero_section .h_full {
 /* service section */
 .services img {
   width: 80px;
+  height: auto;
 }
 .services .border-l-1 {
   border-left: 1px solid #38536b;
