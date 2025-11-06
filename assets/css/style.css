@@ -26,7 +26,9 @@ a {
   font-family: "Raleway", sans-serif;
   letter-spacing: 0.2px;
 }
-
+.text_light_color {
+  color: #ffffffc7;
+}
 .bg_white {
   background: var(--secondary-color);
 }
@@ -42,48 +44,52 @@ a {
 }
 header .navbar-nav .nav-item {
   padding: 0px 5px;
-      white-space: nowrap;
+  white-space: nowrap;
 }
 .h_full {
   height: 100%;
 }
 h1 {
-  font-size: 58px;
+  font-size: 62px;
 }
-
+.fw_500 {
+  font-weight: 500;
+}
 .primary_button {
-        white-space: nowrap;
+  white-space: nowrap;
   padding: 10px 20px;
   border-radius: 50px;
   display: flex;
+  letter-spacing: 0.8px;
   justify-content: center;
   align-items: center;
   column-gap: 10px;
   outline: none;
   border: 1px solid var(--primary-color);
-  font-weight: 500;
+  font-weight: 400;
 }
-.primary_button:hover{
-    background: var(--secondary-color) ;
-    color: var(--primary-color) !important;
+.primary_button:hover {
+  background: var(--secondary-color);
+  color: var(--primary-color) !important;
 }
 
 /* main start */
 /* hero section */
 
 .bg_hero_image {
-    background-position:-26vw 31% !important;
-    background-repeat: no-repeat !important;
-    background: linear-gradient(45deg, #0e86f169, #0e86f169), url(../img/banner.jpg);
-    background-size: cover;
-    height: 100%;
-    width: 128%;
-    filter: grayscale(0.9);
-    /* background: linear-gradient(45deg, #cdcdcd, #dfdfdf00); */
+  background-position: -26vw 29% !important;
+  background-repeat: no-repeat !important;
+  background: linear-gradient(45deg, #0e86f169, #0e86f169),
+    url(../img/banner.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 128%;
+  filter: grayscale(0.9);
+  /* background: linear-gradient(45deg, #cdcdcd, #dfdfdf00); */
 }
 section.hero_section {
   position: relative;
-  height: 485px;
+  height: 530px;
   overflow: hidden;
 }
 section.hero_section .h_full {
@@ -109,7 +115,7 @@ section.hero_section .h_full {
 
 /* testimonial */
 .testimonial .testimonialwwiper {
-  max-width: 1036px;
+  max-width: 1136px;
 }
 .testimonial .testimial_div {
   background-repeat: no-repeat !important;
@@ -125,9 +131,13 @@ section.hero_section .h_full {
   margin: 0 auto;
 }
 .testimonial .testimial_div .inner_div {
-  max-width: 800px;
+  max-width: 950px;
   margin: 0 auto;
   text-align: center;
+}
+.testimonial .testimial_div .inner_div > p {
+  color: rgb(86, 86, 86);
+  font-weight: 400;
 }
 
 .testimonial .testimial_div .swiper-button-prev:after,
@@ -157,27 +167,49 @@ footer .contact_list {
 .contact_list > div:first-child {
   max-width: 350px;
 }
+@media screen and (max-width: 2000px) {
+  .testimonial .testimial_div {
+    background-size: 120% !important;
+    background-position: 0px 63% !important;
+  }
+}
+@media screen and (max-width: 1540px) {
+  .testimonial .testimial_div {
+    background-size: 120% !important;
+    background-position: 0px 44% !important;
+  }
+}
 
+@media screen and (max-width: 1300px) {
+  .testimonial .testimial_div {
+    background-size: 137% !important;
+    background-position: -10vw 25% !important;
+  }
+}
 @media screen and (max-width: 1024px) {
   header .navbar-brand img {
-        width: 208px;
+    width: 208px;
     height: auto;
   }
-  header .navbar .w_full{
+  header .navbar .w_full {
     width: 100%;
   }
   .services .border-l-1:first-child {
     border: 0;
   }
-  .heading{
-    font-size: 25px; line-height: 2rem;
+  .heading {
+    font-size: 25px;
+    line-height: 2rem;
   }
   .testimonial .testimial_div {
-    height: 614px;
+    height: 514px;
+    background-size: cover !important;
+    /* background-position: -20vw -7vh !important; */
+    background-position: center bottom !important;
   }
   h1 {
-    font-size: 38px;
-    }   
+    font-size: 48px;
+  }
   footer .social_icon a {
     width: 30px;
     padding: 18px;
@@ -186,11 +218,27 @@ footer .contact_list {
   }
   .services img {
     width: 50px;
-}
+  }
 }
 
 @media screen and (max-width: 924px) {
-section.hero_section {
+  section.hero_section {
     height: 391px;
+  }
+  section.hero_section .fw_500 {
+    font-size: 1rem !important;
+  }
 }
+
+@media screen and (max-width: 480px) {
+  .bg_hero_image {
+    background: linear-gradient(45deg, #0e86f169, #0e86f169),
+      url("../img/banner.jpg") !important;
+    background-size: 150% !important;
+    /* filter: grayscale(0.8); */
+    background-position: right top !important;
+  }
+  h1 {
+    font-size: 42px;
+  }
 }
